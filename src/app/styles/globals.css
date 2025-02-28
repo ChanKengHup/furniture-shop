@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 8px;
+  --brand-primary: theme(colors.brandPrimary);
+  --brand-primary-dark: theme(colors.brandPrimaryDark);
+  --brand-primary-light: theme(colors.brandPrimaryLight);
+  --primary-on-light: theme(colors.primaryOnLight);
+  --secondary-on-light: theme(colors.secondaryOnLight);
+  --tertiary-on-dark: theme(colors.tertiaryOnDark);
+  --tertiary-on-light: theme(colors.tertiaryOnLight);
+  --primary-on-dark: theme(colors.primaryOnDark);
+  --secondary-on-dark: theme(colors.secondaryOnDark);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  html {
+    @apply scroll-smooth antialiased;
+    font-family: 'Plus Jakarta Sans Variable', sans-serif;
+  }
+
+  #about,
+  #benefits,
+  #faq,
+  #how-to-use,
+  #download:before {
+    margin-top: -120px;
+    padding-top: 120px;
+  }
+
+  /* Main typography */
+  p {
+    @apply text-primaryOnLight font-normal text-base lg:text-lg dark:text-primaryOnDark [.markdown_&]:text-base;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans text-primaryOnLight last:mb-0 dark:text-primaryOnDark [&>strong]:text-brandPrimary [.dark_&]:text-primaryOnDark [.light_&]:text-text-tertiaryOnLight;
+  }
+  h1 strong,
+  h2 strong,
+  h3 strong,
+  h4 strong,
+  h5 strong,
+  h6 strong {
+    font-weight: inherit;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold  [.markdown_&]:pt-6;
+  }
+
+  h1 {
+    @apply text-4xl xs:text-[42px] lg:text-6xl [.markdown_&]:text-3xl;
+  }
+
+  h2 {
+    @apply text-4xl lg:text-5xl [.markdown_&]:text-2xl;
+  }
+
+  h3 {
+    @apply text-3xl lg:text-4xl [.markdown_&]:text-xl;
+  }
+
+  h4 {
+    @apply text-2xl lg:text-3xl [.markdown_&]:text-lg;
+  }
+
+  h5 {
+    @apply text-xl lg:text-2xl [.markdown_&]:text-lg;
+  }
+
+  h6 {
+    @apply text-lg lg:text-xl [.markdown_&]:text-lg;
+  }
+  main a {
+    @apply text-brandPrimary hover:text-brandPrimaryDark;
+  }
+  .highlight {
+    @apply text-brandPrimary;
+  }
+  .small {
+    @apply text-sm font-normal text-text-tertiaryOnLight dark:text-text-tertiaryOnDark;
+  }
+}

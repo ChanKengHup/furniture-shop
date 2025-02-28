@@ -1,19 +1,5 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:@typescript-eslint/strict",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:jsx-a11y/recommended",
-    "plugin:jsonc/recommended-with-jsonc"
-  ],
+  "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
     "import/order": 0,
     "no-new-object": "error",
